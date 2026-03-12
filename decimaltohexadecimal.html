@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Decimal to Hexadecimal Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f9;
+line-height:1.7;
+padding:40px 20px;
+}
+
+/* THEORY SECTION */
+
+.theory{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+font-size:17px;
+}
+
+.theory h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+.theory h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory p{
+margin-top:10px;
+}
+
+/* TABLE */
+
+.table-container{
+overflow-x:auto;
+margin-top:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:10px;
+}
+
+td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f1f5f9;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.theory{
+padding:25px;
+font-size:16px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="theory">
+
+<h1>Decimal to Hexadecimal Conversion</h1>
+
+<h2>Decimal Number System</h2>
+
+<p>
+The decimal number system uses base 10 and digits from 0 to 9. 
+Each position represents powers of 10.
+</p>
+
+<p>
+Example:
+</p>
+
+<p>
+(345)₁₀ = (3 × 10²) + (4 × 10¹) + (5 × 10⁰)
+</p>
+
+<h2>Hexadecimal Number System</h2>
+
+<p>
+The hexadecimal system uses base 16 and includes digits:
+0–9 and A–F.
+</p>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Decimal</th>
+<th>Hex</th>
+</tr>
+
+<tr><td>10</td><td>A</td></tr>
+<tr><td>11</td><td>B</td></tr>
+<tr><td>12</td><td>C</td></tr>
+<tr><td>13</td><td>D</td></tr>
+<tr><td>14</td><td>E</td></tr>
+<tr><td>15</td><td>F</td></tr>
+
+</table>
+
+</div>
+
+<h2>Conversion Method</h2>
+
+<p>
+Divide the decimal number repeatedly by 16 and record the remainders.
+</p>
+
+<p>
+Then read the remainders from bottom to top to get the hexadecimal value.
+</p>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Octal to Binary Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f2f2f2;
+padding:40px 20px;
+line-height:1.7;
+}
+
+/* THEORY */
+
+.theory{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+font-size:17px;
+}
+
+.theory h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+.theory h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+.example{
+background:#f0fdf4;
+padding:15px;
+border-left:5px solid #16a34a;
+margin:20px 0;
+}
+
+/* TABLE */
+
+.table-container{
+margin-top:30px;
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:10px;
+}
+
+td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f1f5f9;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.theory{
+padding:25px;
+font-size:16px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="theory">
+
+<h1>Octal to Binary Conversion</h1>
+
+<h2>Octal Number System</h2>
+
+<p>
+The octal number system is a base-8 number system. It uses eight digits:
+0, 1, 2, 3, 4, 5, 6 and 7. Each position in an octal number represents
+a power of 8.
+</p>
+
+<p>
+Example:
+</p>
+
+<p>
+(345)<sub>8</sub> =
+3 × 8² + 4 × 8¹ + 5 × 8⁰
+</p>
+
+<h2>Binary Number System</h2>
+
+<p>
+Binary is a base-2 number system used by computers and digital systems.
+It uses only two digits:
+</p>
+
+<ul>
+<li>0 → OFF state</li>
+<li>1 → ON state</li>
+</ul>
+
+<p>
+Each position in a binary number represents a power of 2.
+</p>
+
+<h2>Why Convert Octal to Binary?</h2>
+
+<p>
+Binary numbers can be very long and difficult to read. Octal numbers
+are shorter and easier to represent. Because 8 = 2³, each octal digit
+can be directly converted into three binary digits.
+</p>
+
+<h2>Steps to Convert Octal to Binary</h2>
+
+<ul>
+
+<li>Step 1: Write the octal number.</li>
+<li>Step 2: Convert each octal digit into its 3-bit binary equivalent.</li>
+<li>Step 3: Combine all the binary groups.</li>
+<li>Step 4: Remove leading zeros if necessary.</li>
+
+</ul>
+
+<h2>Example 1</h2>
+
+<div class="example">
+
+Convert (57)<sub>8</sub> to Binary
+
+<br><br>
+
+5 → 101  
+<br>
+7 → 111  
+
+<br><br>
+
+Binary = <b>101111</b>
+
+</div>
+
+<h2>Example 2</h2>
+
+<div class="example">
+
+Convert (243)<sub>8</sub> to Binary
+
+<br><br>
+
+2 → 010  
+<br>
+4 → 100  
+<br>
+3 → 011  
+
+<br><br>
+
+Binary = <b>010100011</b>
+
+</div>
+
+<h2>Advantages of Octal System</h2>
+
+<ul>
+<li>Shorter representation than binary.</li>
+<li>Easier grouping of binary digits.</li>
+<li>Used in some computer systems and programming.</li>
+</ul>
+
+<h2>Octal to Binary Reference Table</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Octal</th>
+<th>Binary</th>
+</tr>
+
+<tr><td>0</td><td>000</td></tr>
+<tr><td>1</td><td>001</td></tr>
+<tr><td>2</td><td>010</td></tr>
+<tr><td>3</td><td>011</td></tr>
+<tr><td>4</td><td>100</td></tr>
+<tr><td>5</td><td>101</td></tr>
+<tr><td>6</td><td>110</td></tr>
+<tr><td>7</td><td>111</td></tr>
+
+</table>
+
+</div>
+
+</section>
+
+</body>
+</html>

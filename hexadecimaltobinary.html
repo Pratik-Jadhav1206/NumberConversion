@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hexadecimal to Binary Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f9;
+padding:40px 20px;
+line-height:1.7;
+}
+
+/* THEORY */
+
+.theory{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+font-size:17px;
+}
+
+.theory h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+.theory h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory p{
+margin-top:10px;
+}
+
+.theory ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+/* TABLE */
+
+.table-container{
+margin-top:20px;
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:10px;
+}
+
+td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f1f5f9;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.theory{
+padding:25px;
+font-size:16px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="theory">
+
+<h1>Hexadecimal to Binary Conversion</h1>
+
+<h2>Hexadecimal Number System</h2>
+
+<p>
+The hexadecimal number system uses base 16. It contains sixteen symbols:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F.
+</p>
+
+<p>
+Hexadecimal numbers are widely used in computer science because they provide
+a shorter representation of binary numbers.
+</p>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Hexadecimal</th>
+<th>Binary</th>
+</tr>
+
+<tr><td>0</td><td>0000</td></tr>
+<tr><td>1</td><td>0001</td></tr>
+<tr><td>2</td><td>0010</td></tr>
+<tr><td>3</td><td>0011</td></tr>
+<tr><td>4</td><td>0100</td></tr>
+<tr><td>5</td><td>0101</td></tr>
+<tr><td>6</td><td>0110</td></tr>
+<tr><td>7</td><td>0111</td></tr>
+<tr><td>8</td><td>1000</td></tr>
+<tr><td>9</td><td>1001</td></tr>
+<tr><td>A</td><td>1010</td></tr>
+<tr><td>B</td><td>1011</td></tr>
+<tr><td>C</td><td>1100</td></tr>
+<tr><td>D</td><td>1101</td></tr>
+<tr><td>E</td><td>1110</td></tr>
+<tr><td>F</td><td>1111</td></tr>
+
+</table>
+
+</div>
+
+<h2>Hexadecimal to Binary Conversion</h2>
+
+<p>
+To convert hexadecimal to binary, each hexadecimal digit is replaced
+with its equivalent 4-bit binary value.
+</p>
+
+<h2>Example</h2>
+
+<p>
+Convert (3A)<sub>16</sub> to binary.
+</p>
+
+<p>
+3 → 0011  
+<br>
+A → 1010
+</p>
+
+<p>
+Binary Result = <b>00111010<sub>2</sub></b>
+</p>
+
+<h2>Applications of Hexadecimal</h2>
+
+<ul>
+<li>Memory addresses</li>
+<li>Machine language programming</li>
+<li>HTML and CSS color codes</li>
+<li>Debugging computer systems</li>
+</ul>
+
+</section>
+
+</body>
+</html>

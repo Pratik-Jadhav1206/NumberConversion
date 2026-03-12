@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary to Hexadecimal Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f2f2f2;
+}
+
+/* THEORY */
+
+.theory-section{
+max-width:900px;
+margin:60px auto;
+padding:30px;
+background:white;
+border-radius:6px;
+line-height:1.7;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.theory-section h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+.theory-section h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory-section h3{
+margin-top:20px;
+color:#374151;
+}
+
+.formula-box{
+background:#eef2ff;
+padding:15px;
+border-left:5px solid #4f46e5;
+margin:15px 0;
+}
+
+.example-box{
+background:#f0fdf4;
+padding:15px;
+border-left:5px solid #16a34a;
+margin:20px 0;
+}
+
+.theory-section ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="theory-section">
+
+<h1>Binary and Hexadecimal Number System</h1>
+
+<h2>Binary Number System</h2>
+
+<p>
+The binary number system uses base <b>2</b>. It contains only two digits:
+<b>0</b> and <b>1</b>. Binary numbers are used in digital computers because
+electronic circuits have two states: ON (1) and OFF (0).
+</p>
+
+<p>
+Each digit in binary is called a <b>bit</b>. Binary numbers follow a positional
+system where each digit represents a power of <b>2</b>.
+</p>
+
+<div class="formula-box">
+Example Binary Number: (1011)₂
+<br><br>
+(1 × 2³) + (0 × 2²) + (1 × 2¹) + (1 × 2⁰)
+</div>
+
+<h2>Hexadecimal Number System</h2>
+
+<p>
+The hexadecimal number system uses base <b>16</b>. It contains sixteen symbols.
+</p>
+
+<p>
+Digits: <b>0–9</b> and letters <b>A–F</b>.
+</p>
+
+<p>The letters represent values:</p>
+
+<ul>
+<li>A = 10</li>
+<li>B = 11</li>
+<li>C = 12</li>
+<li>D = 13</li>
+<li>E = 14</li>
+<li>F = 15</li>
+</ul>
+
+<div class="formula-box">
+Example Hex Number: (2F)₁₆
+<br><br>
+(2 × 16¹) + (15 × 16⁰)
+</div>
+
+<h2>How to Convert Binary to Hexadecimal</h2>
+
+<p>
+Binary numbers are converted into hexadecimal by grouping digits
+into sets of <b>four bits</b> starting from the right side.
+</p>
+
+<h3>Steps</h3>
+
+<ul>
+<li>Step 1: Write the binary number.</li>
+<li>Step 2: Group digits into sets of 4.</li>
+<li>Step 3: Convert each group into hexadecimal.</li>
+<li>Step 4: Combine the results.</li>
+</ul>
+
+<h2>Example Conversion</h2>
+
+<div class="example-box">
+
+Convert <b>(10101111)₂</b>
+
+<br><br>
+
+Step 1: Group digits  
+1010 1111
+
+<br><br>
+
+Step 2: Convert each group  
+
+1010 = A  
+1111 = F
+
+<br><br>
+
+<b>Final Result:</b>
+
+<br>
+
+(10101111)₂ = <b>(AF)₁₆</b>
+
+</div>
+
+</section>
+
+</body>
+</html>

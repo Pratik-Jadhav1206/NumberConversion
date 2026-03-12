@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary to Octal Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f2f2f2;
+}
+
+/* THEORY */
+
+.theory-section{
+max-width:900px;
+margin:60px auto;
+padding:30px;
+background:white;
+border-radius:6px;
+line-height:1.7;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.theory-section h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+.theory-section h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.formula-box{
+background:#eef2ff;
+padding:15px;
+border-left:5px solid #4f46e5;
+margin:15px 0;
+}
+
+.example-box{
+background:#f0fdf4;
+padding:15px;
+border-left:5px solid #16a34a;
+margin:20px 0;
+}
+
+.theory-section ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="theory-section">
+
+<h1>Binary and Octal Number System</h1>
+
+<h2>Binary System</h2>
+
+<p>
+The binary number system uses base <b>2</b> and contains only two digits:
+<b>0</b> and <b>1</b>. Binary numbers are widely used in computers and
+digital electronics because electronic circuits have two states:
+<b>ON (1)</b> and <b>OFF (0)</b>.
+</p>
+
+<div class="formula-box">
+
+Example Binary Number: <b>(1011)₂</b>
+
+<br><br>
+
+(1 × 2³) + (0 × 2²) + (1 × 2¹) + (1 × 2⁰)
+
+</div>
+
+
+<h2>Octal System</h2>
+
+<p>
+The octal number system uses base <b>8</b> and contains eight digits:
+<b>0,1,2,3,4,5,6,7</b>.
+</p>
+
+<div class="formula-box">
+
+Example Octal Number: <b>(345)₈</b>
+
+<br><br>
+
+(3 × 8²) + (4 × 8¹) + (5 × 8⁰)
+
+</div>
+
+
+<h2>Binary to Octal Conversion</h2>
+
+<ul>
+
+<li>Step 1: Write the binary number.</li>
+<li>Step 2: Group digits into sets of 3 from the right.</li>
+<li>Step 3: Convert each group into octal.</li>
+<li>Step 4: Combine the octal digits.</li>
+
+</ul>
+
+
+<div class="example-box">
+
+Example: Convert <b>(101011)₂</b>
+
+<br><br>
+
+Step 1: Group digits  
+101 011
+
+<br><br>
+
+Step 2: Convert groups
+
+<br>
+
+101 = 5  
+011 = 3
+
+<br><br>
+
+<b>Result = (53)₈</b>
+
+</div>
+
+</section>
+
+</body>
+
+</html>

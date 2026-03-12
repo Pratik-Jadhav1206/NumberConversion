@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Decimal to Octal Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f9;
+line-height:1.7;
+}
+
+/* THEORY SECTION */
+
+.theory{
+max-width:900px;
+margin:60px auto;
+font-size:17px;
+padding:20px;
+background:white;
+border-radius:6px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.theory h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory p{
+margin-top:10px;
+}
+
+/* TABLE */
+
+.table-container{
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:10px;
+}
+
+td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f1f5f9;
+}
+h1{
+    text-align: center;
+    color: #1e3a8a;
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="theory">
+<h1>Decimal to Octal</h1>
+<h2>Decimal Number System</h2>
+
+<p>
+The decimal number system uses base 10 and digits from 0 to 9.
+Each position in a decimal number represents a power of 10.
+</p>
+
+<p>Example:</p>
+
+<p>
+(345)₁₀ = (3 × 10²) + (4 × 10¹) + (5 × 10⁰)
+</p>
+
+<p>
+Decimal numbers are commonly used in everyday life but computers
+often convert them into other number systems such as binary,
+octal, and hexadecimal.
+</p>
+
+
+<h2>Octal Number System</h2>
+
+<p>
+The octal number system uses base 8 and digits from 0 to 7.
+Each digit position represents a power of 8.
+</p>
+
+<p>Example:</p>
+
+<p>
+(325)₈ = (3 × 8²) + (2 × 8¹) + (5 × 8⁰)
+</p>
+
+<p>
+= 192 + 16 + 5 = 213₁₀
+</p>
+
+
+<h2>Decimal to Octal Conversion Method</h2>
+
+<p>
+To convert a decimal number to octal we use repeated division by 8.
+</p>
+
+<ol>
+
+<li>Divide the decimal number by 8.</li>
+<li>Write the remainder.</li>
+<li>Divide the quotient again by 8.</li>
+<li>Repeat until the quotient becomes zero.</li>
+<li>Read remainders from bottom to top.</li>
+
+</ol>
+
+
+<h2>Example</h2>
+
+<p>Convert decimal number 83 into octal.</p>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Division</th>
+<th>Quotient</th>
+<th>Remainder</th>
+</tr>
+
+<tr>
+<td>83 ÷ 8</td>
+<td>10</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>10 ÷ 8</td>
+<td>1</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>1 ÷ 8</td>
+<td>0</td>
+<td>1</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+Reading remainders from bottom to top gives the octal result:
+</p>
+
+<p><b>123₈</b></p>
+
+
+<h2>Advantages of Octal System</h2>
+
+<ul>
+
+<li>Short representation of binary numbers.</li>
+<li>Easy conversion between binary and octal.</li>
+<li>Used in low level programming.</li>
+<li>Helpful in digital electronics.</li>
+
+</ul>
+
+
+<h2>Applications of Octal Numbers</h2>
+
+<ul>
+
+<li>Computer memory addressing</li>
+<li>Microprocessor programming</li>
+<li>Digital electronics</li>
+<li>UNIX file permissions</li>
+<li>Binary number representation</li>
+
+</ul>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Octal to Decimal Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f2f2f2;
+padding:40px 20px;
+line-height:1.8;
+}
+
+/* THEORY */
+
+.theory{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+font-size:17px;
+}
+
+.theory h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+.theory h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+.example{
+background:#f0fdf4;
+padding:15px;
+border-left:5px solid #16a34a;
+margin:20px 0;
+}
+
+/* TABLE */
+
+.table-container{
+margin-top:30px;
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:10px;
+}
+
+td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f1f5f9;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.theory{
+padding:25px;
+font-size:16px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="theory">
+
+<h1>Octal to Decimal Conversion</h1>
+
+<h2>Octal Number System</h2>
+
+<p>
+The octal number system is a base-8 number system. It uses eight digits:
+0, 1, 2, 3, 4, 5, 6 and 7. Each position in an octal number represents
+a power of 8.
+</p>
+
+<p>
+Example:
+</p>
+
+<p>
+(325)<sub>8</sub> =
+3 × 8² + 2 × 8¹ + 5 × 8⁰
+</p>
+
+<h2>Decimal Number System</h2>
+
+<p>
+The decimal number system is the most commonly used number system.
+It is a base-10 system that uses digits from 0 to 9.
+</p>
+
+<p>
+Each position represents powers of 10.
+</p>
+
+<h2>Why Convert Octal to Decimal?</h2>
+
+<ul>
+<li>Computers sometimes store values in octal format.</li>
+<li>Humans understand decimal numbers more easily.</li>
+<li>Conversion helps interpret machine values.</li>
+</ul>
+
+<h2>Steps to Convert Octal to Decimal</h2>
+
+<ul>
+<li>Step 1: Write the octal number.</li>
+<li>Step 2: Multiply each digit by the power of 8 based on its position.</li>
+<li>Step 3: Add all the results.</li>
+</ul>
+
+<h2>Example 1</h2>
+
+<div class="example">
+
+Convert (157)<sub>8</sub> to decimal
+
+<br><br>
+
+1 × 8² = 64  
+<br>
+5 × 8¹ = 40  
+<br>
+7 × 8⁰ = 7  
+
+<br><br>
+
+Decimal = 64 + 40 + 7  
+<br>
+
+<b>Result = 111</b>
+
+</div>
+
+<h2>Example 2</h2>
+
+<div class="example">
+
+Convert (243)<sub>8</sub> to decimal
+
+<br><br>
+
+2 × 8² = 128  
+<br>
+4 × 8¹ = 32  
+<br>
+3 × 8⁰ = 3  
+
+<br><br>
+
+Decimal = 128 + 32 + 3  
+<br>
+
+<b>Result = 163</b>
+
+</div>
+
+<h2>Octal to Decimal Reference Table</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Octal</th>
+<th>Decimal</th>
+</tr>
+
+<tr><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>3</td></tr>
+<tr><td>4</td><td>4</td></tr>
+<tr><td>5</td><td>5</td></tr>
+<tr><td>6</td><td>6</td></tr>
+<tr><td>7</td><td>7</td></tr>
+<tr><td>10</td><td>8</td></tr>
+<tr><td>11</td><td>9</td></tr>
+<tr><td>12</td><td>10</td></tr>
+<tr><td>13</td><td>11</td></tr>
+
+</table>
+
+</div>
+
+</section>
+
+</body>
+</html>

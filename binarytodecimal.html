@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary to Decimal Converter</title>
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f2f2f2;
+line-height:1.6;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#0f172a;
+color:white;
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+/* LOGO */
+
+.logo img{
+height:70px;
+max-width:100%;
+}
+
+/* NAV MENU */
+
+.nav-menu{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:white;
+font-size:16px;
+}
+
+.nav-menu a:hover{
+color:#38bdf8;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+/* TITLE */
+
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+.description{
+text-align:center;
+margin-bottom:25px;
+color:#444;
+}
+
+/* CONVERTER */
+
+.converter-box{
+background:#dfe8c7;
+border:1px solid #b6c59e;
+padding:25px;
+border-radius:6px;
+max-width:800px;
+margin:auto;
+}
+
+.converter-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-bottom:15px;
+}
+
+label{
+font-weight:bold;
+display:block;
+margin-bottom:6px;
+}
+
+textarea{
+width:100%;
+height:50px;
+padding:10px;
+border-radius:4px;
+border:1px solid #ccc;
+font-size:16px;
+resize:none;
+}
+
+.convert-btn{
+background:#7da21d;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.convert-btn:hover{
+background:#6c8e18;
+}
+
+/* THEORY */
+
+.theory-content{
+max-width:900px;
+margin:60px auto;
+padding:25px;
+background:white;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.theory-content h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+.theory-content h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory-content h3{
+margin-top:20px;
+color:#374151;
+}
+
+.theory-content p{
+margin:10px 0;
+}
+
+.theory-content ul{
+margin-left:20px;
+}
+
+.formula-box{
+background:#eef2ff;
+padding:15px;
+border-left:5px solid #4f46e5;
+margin:15px 0;
+}
+
+.example-box{
+background:#f0fdf4;
+padding:15px;
+border-left:5px solid #16a34a;
+margin:20px 0;
+}
+
+/* TABLE */
+
+.binary-table-section{
+max-width:600px;
+margin:50px auto;
+padding:0 15px;
+}
+
+.binary-table{
+width:100%;
+border-collapse:collapse;
+overflow-x:auto;
+}
+
+.binary-table th{
+background:#0f172a;
+color:white;
+padding:10px;
+}
+
+.binary-table td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+.binary-table tr:nth-child(even){
+background:#f1f5f9;
+}
+
+/* FOOTER */
+
+.footer{
+background:#0f172a;
+color:white;
+padding:40px 20px;
+margin-top:60px;
+}
+
+.footer-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer ul li{
+margin-bottom:8px;
+}
+
+.footer ul a{
+text-decoration:none;
+color:#cbd5f5;
+}
+
+.footer ul a:hover{
+color:#38bdf8;
+}
+
+.copyright{
+text-align:center;
+margin-top:25px;
+color:#94a3b8;
+}
+
+/* TABLE SCROLL FOR MOBILE */
+
+.table-wrapper{
+overflow-x:auto;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-menu{
+flex-direction:column;
+width:100%;
+display:none;
+margin-top:10px;
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+.converter-grid{
+grid-template-columns:1fr;
+}
+
+.theory-content{
+padding:20px;
+margin:30px 15px;
+}
+
+.binary-table-section{
+margin:40px 10px;
+}
+
+.binary-table th,
+.binary-table td{
+padding:8px;
+font-size:14px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="theory-content">
+
+<h1>Binary and Decimal Number System</h1>
+
+<h2>Binary System</h2>
+
+<p>
+The binary numeral system uses the number <b>2</b> as its base (radix). 
+As a base-2 numeral system, it consists of only two numbers: <b>0 and 1</b>.
+</p>
+
+<p>
+While it has been applied in ancient Egypt, China and India for different purposes, 
+the binary system has become the language of electronics and computers in the modern world.
+</p>
+
+<p>
+This is the most efficient system to detect an electric signal’s 
+<b>OFF (0)</b> and <b>ON (1)</b> state.
+</p>
+
+<p>
+Binary is also the basis of computer data and digital text. 
+Everything in computers is stored using binary numbers.
+</p>
+
+<p>
+Binary numbers follow a positional system where each digit represents 
+a power of <b>2</b> starting from the rightmost position.
+</p>
+
+
+<h2>Decimal System</h2>
+
+<p>
+The decimal numeral system is the most commonly used number system in daily life.
+It uses the base <b>10</b>.
+</p>
+
+<p>
+It contains ten symbols:
+<b>0,1,2,3,4,5,6,7,8,9</b>.
+</p>
+
+<p>
+Each digit position represents a power of 10.
+</p>
+
+<div class="formula-box">
+Example Decimal Number: <b>2345.67</b>
+<br><br>
+
+(2 × 10³) + (3 × 10²) + (4 × 10¹) + (5 × 10⁰) + (6 × 10⁻¹) + (7 × 10⁻²)
+</div>
+
+
+<h2>How to Read a Binary Number</h2>
+
+<p>
+In the binary positional system each digit represents a power of 2.
+The rightmost digit represents <b>2⁰</b>.
+</p>
+
+<div class="formula-box">
+
+Example Binary Number: <b>(1010)₂</b>
+
+<br><br>
+
+(1 × 2³) + (0 × 2²) + (1 × 2¹) + (0 × 2⁰)
+
+</div>
+
+
+
+<h2>How to Convert Binary to Decimal</h2>
+
+There are two methods.
+
+<h3>Method 1: Using Positions</h3>
+
+<ul>
+
+<li>Step 1: Write the binary number.</li>
+
+<li>Step 2: Multiply each digit with its position value (power of 2).</li>
+
+<li>Step 3: Add all results to get the decimal value.</li>
+
+</ul>
+
+<div class="example-box">
+
+Example: Convert <b>(1010)₂</b>
+
+<br><br>
+
+(1 × 2³) + (0 × 2²) + (1 × 2¹) + (0 × 2⁰)
+
+<br><br>
+
+= (1×8) + (0×4) + (1×2) + (0×1)
+
+<br><br>
+
+= 8 + 0 + 2 + 0
+
+<br><br>
+
+<b>Result = 10</b>
+
+</div>
+
+
+
+<h3>Method 2: Double Dabble (Doubling Method)</h3>
+
+<p>
+This method converts binary to decimal using a repeated process:
+</p>
+
+<ul>
+
+<li>Double the previous total</li>
+
+<li>Add the next binary digit</li>
+
+</ul>
+
+<div class="example-box">
+
+Example: Convert <b>(1010)₂</b>
+
+<br><br>
+
+(0 × 2) + 1 = 1
+
+<br>
+
+(1 × 2) + 0 = 2
+
+<br>
+
+(2 × 2) + 1 = 5
+
+<br>
+
+(5 × 2) + 0 = 10
+
+<br><br>
+
+<b>Result = 10</b>
+
+</div>
+
+
+
+<h2>Binary to Decimal Conversion Examples</h2>
+
+<div class="example-box">
+
+Example 1: <b>(1110010)₂ = (114)₁₀</b>
+
+<br><br>
+
+= (0 × 2⁰) + (1 × 2¹) + (0 × 2²) + (0 × 2³) + (1 × 2⁴) + (1 × 2⁵) + (1 × 2⁶)
+
+<br><br>
+
+= 0 + 2 + 0 + 0 + 16 + 32 + 64
+
+<br><br>
+
+<b>= 114</b>
+
+</div>
+
+
+<div class="example-box">
+
+Example 2: <b>(11011)₂ = (27)₁₀</b>
+
+<br><br>
+
+= (1×1) + (1×2) + (0×4) + (1×8) + (1×16)
+
+<br><br>
+
+= 1 + 2 + 0 + 8 + 16
+
+<br><br>
+
+<b>= 27</b>
+
+</div>
+
+</section>
+
+<div class="binary-table-section">
+
+<h2>Binary to Decimal Table (1–20)</h2>
+
+<div class="table-wrapper">
+
+<table class="binary-table">
+
+<tr>
+<th>Decimal</th>
+<th>Binary</th>
+</tr>
+
+<tr><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>10</td></tr>
+<tr><td>3</td><td>11</td></tr>
+<tr><td>4</td><td>100</td></tr>
+<tr><td>5</td><td>101</td></tr>
+<tr><td>6</td><td>110</td></tr>
+<tr><td>7</td><td>111</td></tr>
+<tr><td>8</td><td>1000</td></tr>
+<tr><td>9</td><td>1001</td></tr>
+<tr><td>10</td><td>1010</td></tr>
+<tr><td>11</td><td>1011</td></tr>
+<tr><td>12</td><td>1100</td></tr>
+<tr><td>13</td><td>1101</td></tr>
+<tr><td>14</td><td>1110</td></tr>
+<tr><td>15</td><td>1111</td></tr>
+<tr><td>16</td><td>10000</td></tr>
+<tr><td>17</td><td>10001</td></tr>
+<tr><td>18</td><td>10010</td></tr>
+<tr><td>19</td><td>10011</td></tr>
+<tr><td>20</td><td>10100</td></tr>
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>

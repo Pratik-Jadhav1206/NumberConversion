@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hexadecimal to Octal Theory</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f9;
+padding:40px 20px;
+line-height:1.7;
+}
+
+/* THEORY */
+
+.theory{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+font-size:17px;
+}
+
+.theory h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+.theory h2{
+margin-top:30px;
+color:#1e3a8a;
+}
+
+.theory p{
+margin-top:10px;
+}
+
+.theory ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+.theory ol{
+margin-left:20px;
+margin-top:10px;
+}
+
+.example{
+background:#f0fdf4;
+padding:15px;
+border-left:5px solid #16a34a;
+margin:20px 0;
+}
+
+/* TABLE */
+
+.table-container{
+margin-top:30px;
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:10px;
+}
+
+td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#f1f5f9;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.theory{
+padding:25px;
+font-size:16px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="theory">
+
+<h1>Hexadecimal to Octal Conversion</h1>
+
+<h2>Hexadecimal Number System</h2>
+
+<p>
+Hexadecimal number system uses base 16 and contains digits from 0–9 and letters A–F.
+It is widely used in computer systems because it represents binary numbers
+in a shorter and more readable format.
+</p>
+
+<h2>Octal Number System</h2>
+
+<p>
+Octal number system uses base 8 and digits from 0–7.
+It is also used in computer systems as a compact representation of binary numbers.
+</p>
+
+<h2>Hexadecimal to Octal Conversion</h2>
+
+<p>
+Hexadecimal cannot be directly converted to octal easily.
+So we follow two steps:
+</p>
+
+<ol>
+
+<li>Convert hexadecimal number to binary.</li>
+
+<li>Convert the binary number to octal.</li>
+
+</ol>
+
+<h2>Example</h2>
+
+<div class="example">
+
+Convert (2F)<sub>16</sub> to Octal
+
+<br><br>
+
+2F<sub>16</sub> → Binary → 0010 1111
+
+<br><br>
+
+Binary → Octal → 057<sub>8</sub>
+
+<br><br>
+
+Final Answer: <b>57<sub>8</sub></b>
+
+</div>
+
+<h2>Applications</h2>
+
+<ul>
+
+<li>Computer programming</li>
+<li>Digital electronics</li>
+<li>Microprocessor systems</li>
+<li>Data representation</li>
+
+</ul>
+
+<h2>Hexadecimal to Octal Reference Table</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Hex</th>
+<th>Binary</th>
+<th>Octal</th>
+</tr>
+
+<tr><td>0</td><td>0000</td><td>0</td></tr>
+<tr><td>1</td><td>0001</td><td>1</td></tr>
+<tr><td>2</td><td>0010</td><td>2</td></tr>
+<tr><td>3</td><td>0011</td><td>3</td></tr>
+<tr><td>4</td><td>0100</td><td>4</td></tr>
+<tr><td>5</td><td>0101</td><td>5</td></tr>
+<tr><td>6</td><td>0110</td><td>6</td></tr>
+<tr><td>7</td><td>0111</td><td>7</td></tr>
+<tr><td>8</td><td>1000</td><td>10</td></tr>
+<tr><td>9</td><td>1001</td><td>11</td></tr>
+<tr><td>A</td><td>1010</td><td>12</td></tr>
+<tr><td>B</td><td>1011</td><td>13</td></tr>
+<tr><td>C</td><td>1100</td><td>14</td></tr>
+<tr><td>D</td><td>1101</td><td>15</td></tr>
+<tr><td>E</td><td>1110</td><td>16</td></tr>
+<tr><td>F</td><td>1111</td><td>17</td></tr>
+
+</table>
+
+</div>
+
+</section>
+
+</body>
+</html>
